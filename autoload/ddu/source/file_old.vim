@@ -10,6 +10,8 @@ function! ddu#source#file_old#_get_oldfiles() abort
     else
       let l:oldfiles = l:oldfiles->map({ _, val -> substitute(val, '/', '\\', 'g') })
     endif
+
+    let l:oldfiles = l:oldfiles->map({ _, val -> substitute(val, '^\([a-z]\):', '\u\1:', '') })
   endif
 
   let l:oldfiles = l:oldfiles->filter({ _, val -> filereadable(val) })
