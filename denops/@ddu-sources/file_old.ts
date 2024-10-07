@@ -1,7 +1,12 @@
-import { BaseSource, Item } from "https://deno.land/x/ddu_vim@v4.1.0/types.ts";
-import { Denops, fn } from "https://deno.land/x/ddu_vim@v4.1.0/deps.ts";
-import { ActionData } from "https://deno.land/x/ddu_kind_file@v0.7.1/file.ts";
-import { relative } from "jsr:@std/path@0.225.1";
+import { type Item } from "jsr:@shougo/ddu-vim@~6.1.0/types";
+import { BaseSource } from "jsr:@shougo/ddu-vim@~6.1.0/source";
+
+import { type ActionData } from "jsr:@shougo/ddu-kind-file@~0.9.0";
+
+import type { Denops } from "jsr:@denops/core@~7.0.0";
+import * as fn from "jsr:@denops/std@~7.1.0/function";
+
+import { relative } from "jsr:@std/path@~1.0.3/relative";
 
 type Params = Record<string, never>;
 
